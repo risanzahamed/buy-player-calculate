@@ -17,3 +17,105 @@
             <p class="mt-10 text-2xl font-normal">2020 has not been a good year for everyone. But for some football players, <br> it has been the best one of their careers so far.  Some players have shown <br> their best performance this year.  Based on these football players’ performance in the <br> previous year, we have created a list of the world’s five best football players in 2021</p>
         </section>
     </header>
+    <main class="bg-emerald-100">
+        <section class="container mx-auto ">
+            <div class="grid grid-cols-4 gap-4 pt-10  text-center">
+                <!-- Player 01 -->
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/messi.png" alt="">
+                    <h1 class="p-6 text-4xl font-semibold">Lionel Messi</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button class="select-btn mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                  <!-- Player 02 -->
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/naymer.png" alt="">
+                    <h1 class="p-6 text-4xl font-semibold">Neymar Jr</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button class="select-btn mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                  <!-- Player 03 -->
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/kylian.png" alt="">
+                    <h1 class="p-6 text-4xl font-semibold">Kylian Mbappé</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button class="select-btn mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                <div class="bg-black text-black  pt-5 pb-10">
+
+                    <div class="overflow-x-auto bg-black"">
+                        <table class="table text-white bg-black" ">
+                            <!-- head -->
+                            <thead class="">
+                                <tr class="">
+                                    <th class="bg-black"></th>
+                                    <th class="bg-black font-semibold capitalize text-4xl">Selected - <span id="player-select">0</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="selected-players" class="bg-black">
+                                <!-- row 1 -->
+                                <tr class="text-white text-5xl">
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-4 gap-4 mt-10 pb-10 text-center ">
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/remato.png" alt="">
+                    <h1 id="Renato-Sanches" class="p-6 text-4xl font-semibold">Renato Sanches</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button id="select-btn"
+                        class=" mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/sergio.png" alt="">
+                    <h1 class="p-6 text-4xl font-semibold">Neymar Jr</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button id="select-btn"
+                        class="mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                <div class="bg-black text-white pb-7">
+                    <img class="object-fill h-45 w-96" src="images/vitor.png" alt="">
+                    <h1 class="p-6 text-4xl font-semibold">Kylian Mbappé</h1>
+                    <p class="text-2xl font-light">36 Goals 120 Assist</p>
+                    <button id="select-btn"
+                        class="mt-5 px-20 py-2 font-medium text-1xl bg-white text-black" onclick="playerClick(this)">Select</button>
+                </div>
+                <section class="bg-black text-white  pt-5 pb-10">
+                    <h1 class="p-6 text-4xl font-semibold">Budget</h1>
+                    <div class="inline-flex">
+                        <h1 class="text-2xl font-light mt-1 px-4">Per Player</h1>
+                        <input class="bg-black text-white border p-3" type="number" name="" id="calculate-input">
+                    </div>
+                    <button
+                       id="calculate-player" class="mt-5 px-20 py-2 font-medium text-2xl bg-green-400 text-white">Calculate</button>
+                    <div>
+                        <h1 class="text-2xl font-light mt-4 ">Player Expenses<span id="player-expenses" class="ml-8 font-semibold text-orange-600 ">00</span></h1>
+                    </div>
+                    <div class="inline-flex mt-8">
+                        <h1 class="text-2xl font-light mt-1 px-4">Manager</h1>
+                        <input class="bg-black text-white border p-3" type="number" name="" id="manager-input">
+                    </div>
+                    <div class="inline-flex mt-5">
+                        <h1 class="text-2xl font-light mt-1 px-4">Coach</h1>
+                        <input class="bg-black text-white border ml-7 p-3" type="number" name="" id="coach-input">
+                    </div>
+
+                    <button id="calculate-total"
+                        class=" mt-5 px-20 py-2 font-medium text-2xl bg-green-400 text-white">Calculate
+                        Total</button>
+                    <div>
+                        <h1 class="text-2xl font-light mt-4">Total<span id="total-price"
+                                class="ml-8 font-semibold text-orange-600">00</span></h1>
+                    </div>
+
+                </section>
+
+
+            </div>
+        </section>
+    </main>
